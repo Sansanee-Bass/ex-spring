@@ -1,3 +1,6 @@
+#app specific ignored files
+config/db.js
+
 # Logs
 logs
 *.log
