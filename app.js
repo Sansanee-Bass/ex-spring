@@ -3,12 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const db = require("./config/db");
+
 
 var indexRouter = require('./controllers/index');
 //var usersRouter = require('./routes/users');
 
 var app = express();
 
+
+db.init();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

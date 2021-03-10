@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
+const pageModel = require('../models/page');
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  const pageData = await getPage("home");
+  const pageData = await pageModel.getPage("home");
   console.log(pageData);
   //getPage().then();
   res.render('index', { title: pageData.title, page: pageData });

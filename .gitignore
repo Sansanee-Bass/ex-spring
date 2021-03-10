@@ -1,5 +1,5 @@
 #app specific ignored files
-config/db.js
+config/secrets.js
 
 # Logs
 logs
