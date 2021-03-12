@@ -1,0 +1,22 @@
+{{#if auth.loggedIn}}
+Hello {{auth.username}} | <a href="{{page.pageKey}}?logout">Logout</a>
+{{else}}
+
+<form id="login" action="{{page.pageKey}}" method="POST" enctype="application/x-www-form-urlencoded">
+
+
+
+
+    <div>
+        <label for="user">User:</label>
+        <input name="user" id="user" type="text" />
+
+    </div>
+    <div>
+        <label for="pass">Password:</label>
+        <input name="pass" id="pass" type="password" />
+
+    </div>
+    <input type="submit" name="action" value="login" />
+</form>
+{{/if}}

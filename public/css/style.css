@@ -15,7 +15,7 @@ white: #FFF
 
 body {
     margin: 0;
-    background-image: url("../img/bg.jpg");
+    background-image: url("../img/alo.jpg");
     background-size: cover;
 }
 
@@ -25,7 +25,7 @@ aside>ul {
 
 #site {
     box-sizing: border-box;
-    border: #1E4F94 6px groove;
+    border: #5fa6c2 6px groove;
     border-radius: 8px 2px;
     box-shadow: 3px 6px 8px #0a1c38aa;
     background-color: #fffc;
@@ -74,7 +74,7 @@ main {
 }
 
 aside {
-    background-color: #E08343;
+    background-color: #ceba4caf;
     box-sizing: border-box;
     font-size: initial;
     vertical-align: top;
