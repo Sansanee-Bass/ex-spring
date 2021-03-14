@@ -5,7 +5,7 @@ const db = require('../config/db');
 module.exports = {
     addPage: async function (pageData, userID) {
         let connection = await db.getConnection();
-
+        //INSERT INTO `phpsite2`.`page` (`pageKey`, `title`, `content`) VALUES ('about', 'about us', 'test');
         const res = await connection.query("INSERT INTO `phpsite2`.`page` (`pageKey`, `title`, `content`, `lastUserID`) VALUES (?, ?, ?, ?);",
             [
                 pageData.pageKey, pageData.title, pageData.content, userID,
@@ -17,7 +17,6 @@ module.exports = {
         } else {
             return false;
         }
-
     },
 
     editPage: async function (pageKey, pageData, userID) {
