@@ -8,6 +8,7 @@ const hbs = require('hbs');
 const login = require('./middleware/login');
 
 const indexRouter = require('./controllers/page');
+const reviewRouter = require('./controllers/review');
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(login);
+app.use('/review/', reviewRouter);
 
 app.use('/', indexRouter);
 

@@ -1,0 +1,15 @@
+{{#if auth.loggedIn}}
+<a href="review/add">Tell Us What You Think!</a>
+{{/if}}
+<div class="review">
+    {{#each reviewEntries.rows}}
+    <div class="entry">
+        <h2>{{title}}</h2>
+        <div class="user">{{username}}</div>
+        <div class="content">{{{content}}}</div>
+    </div>
+    {{/each}}
+    {{#each reviewEntries.entries}}
+    <a href="/review/{{start}}">{{page}}</a>
+    {{/each}}
+</div>
